@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+  - name: Create Test directory
+    ansible.builtin.file:
+      path: /home/codio/workspace/test/directory
+      recurse: true
+      state: directory

@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks:
+  - name: Create Test file
+    ansible.builtin.copy:
+      src: templates/main.html
+      path: /home/codio/workspace/test_file
+      state: touch
+      owner: bin
+      group: wheel
+      mode: '0644'

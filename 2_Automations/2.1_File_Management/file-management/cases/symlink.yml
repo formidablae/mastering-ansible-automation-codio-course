@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+  - name: Create Test Link
+    ansible.builtin.file:
+      src: /home/codio/workspace/test
+      dest: /home/codio/workspace/test_link
+      state: link

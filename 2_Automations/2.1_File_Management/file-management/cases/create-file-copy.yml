@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+  - name: Create Test file
+    ansible.builtin.template:
+      src: templates/index.html.j2
+      dest: /home/codio/workspace/dest/index.html
