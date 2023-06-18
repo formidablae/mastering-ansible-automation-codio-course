@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+  - name: Create Test file
+    ansible.builtin.template:
+      src: templates/main.html
+      path: /home/codio/workspace/test_file
+      state: touch
