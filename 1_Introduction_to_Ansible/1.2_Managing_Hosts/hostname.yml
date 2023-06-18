@@ -1,0 +1,10 @@
+- name: Second one
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Print My hostname
+      ansible.builtin.debug:
+        var: ansible_hostname
+    - name: Print My hostname
+      ansible.builtin.debug:
+        var: ansible_lsb

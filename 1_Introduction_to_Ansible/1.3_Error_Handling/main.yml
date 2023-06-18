@@ -1,0 +1,17 @@
+---
+- name: Play Name
+- hosts: all
+  become: true
+  tasks:
+    - name: add apt key for nodesource
+      ansible.builtin.apt_key:
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+    - name: add repo for nodesource
+      ansible.builtin.apt_repository:
+        repo: 'deb https://deb.nodesource.com/node_16.x {{ ansible_distribution_release }} main'
+        update_cache: true
+
+    - name: install nodejs
+      ansible.builtin.apt:
+        name: nodejs
